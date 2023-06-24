@@ -1,84 +1,309 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>JS Drum Kit</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="https://fav.farm/✅" />
-</head>
-<body>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hasan Pekedis</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="mobile-menu-open" class="shadow-large">
+      <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+    <!-- End #mobile-menu-toggle -->
+    <header>
+      <div id="mobile-menu-close">
+        <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
+      </div>
+      <ul id="menu" class="shadow">
+        <li>
+          <a href="#about">About</a>
+        </li>
+        <li>
+          <a href="#experience">Experience</a>
+        </li>
+        <li>
+          <a href="#education">Education</a>
+        </li>
+        <li>
+          <a href="#projects">Projects</a>
+        </li>
+        <li>
+          <a href="#skills">Skills</a>
+        </li>
+        
+      </ul>
+    </header>
+    <!-- End header -->
+
+    <div id="lead">
+      <div id="lead-content">
+        <h1>Hasan Pekedis</h1>
+        <h2>Marmara University <br />Computer Engineering</h2>
+
+        <a href="cv\Hasan's ResumeEnglish.pdf" class="btn-rounded-white" download="Hasan's ResumeEnglish">Download Resume(English)</a>
+
+        <a href="cv\Hasan's ResumeTurkce1.pdf" class="btn-rounded-white" download="Hasan's ResumeTurkce1">Download Resume(Turkish)</a>
 
 
-  <div class="keys">
-    <div data-key="65" class="key">
-      <kbd>A</kbd>
-      <span class="sound">clap</span>
-    </div>
-    <div data-key="83" class="key">
-      <kbd>S</kbd>
-      <span class="sound">hihat</span>
-    </div>
-    <div data-key="68" class="key">
-      <kbd>D</kbd>
-      <span class="sound">kick</span>
-    </div>
-    <div data-key="70" class="key">
-      <kbd>F</kbd>
-      <span class="sound">openhat</span>
-    </div>
-    <div data-key="71" class="key">
-      <kbd>G</kbd>
-      <span class="sound">boom</span>
-    </div>
-    <div data-key="72" class="key">
-      <kbd>H</kbd>
-      <span class="sound">ride</span>
-    </div>
-    <div data-key="74" class="key">
-      <kbd>J</kbd>
-      <span class="sound">snare</span>
-    </div>
-    <div data-key="75" class="key">
-      <kbd>K</kbd>
-      <span class="sound">tom</span>
-    </div>
-    <div data-key="76" class="key">
-      <kbd>L</kbd>
-      <span class="sound">tink</span>
-    </div>
-  </div>
+      
+      </div>
+      <!-- End #lead-content -->
 
-  <audio data-key="65" src="sounds/clap.wav"></audio>
-  <audio data-key="83" src="sounds/hihat.wav"></audio>
-  <audio data-key="68" src="sounds/kick.wav"></audio>
-  <audio data-key="70" src="sounds/openhat.wav"></audio>
-  <audio data-key="71" src="sounds/boom.wav"></audio>
-  <audio data-key="72" src="sounds/ride.wav"></audio>
-  <audio data-key="74" src="sounds/snare.wav"></audio>
-  <audio data-key="75" src="sounds/tom.wav"></audio>
-  <audio data-key="76" src="sounds/tink.wav"></audio>
+      <div id="lead-overlay"></div>
 
-<script>
-  function removeTransition(e) {
-    if (e.propertyName !== 'transform') return;
-    e.target.classList.remove('playing');
-  }
+      <div id="lead-down">
+        <span>
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </span>
+      </div>
+      <!-- End #lead-down -->
+    </div>
+    <!-- End #lead -->
 
-  function playSound(e) {
-    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-    const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
-    if (!audio) return;
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h2 class="heading"><b>About Me</b></h2>
+          </div>
+          <div class="col-md-8">
+            <p>
+              20 years old. Second year computer science engineering student.
+              Interested in data science and artificial intelligence. Passionate
+              about following the current technology closely. Average level
+              computer hardware knowledge. My studies have provided me with a
+              solid foundation in programming, algorithms, and software
+              development, allowing me to delve deeper into the fascinating
+              world of data analysis and machine learning. While my computer
+              hardware knowledge may be at an average level, I am eager to
+              expand my understanding in this area as I recognize its importance
+              in building efficient and powerful systems. With every passing
+              day, I am driven by a desire to explore the endless possibilities
+              of these cutting-edge technologies and contribute to their
+              advancement through my own research and projects.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End #about -->
 
-    key.classList.add('playing');
-    audio.currentTime = 0;
-    audio.play();
-  }
+    <div id="education">
+      <h2 class="heading"><b>Education</b></h2>
+      <div class="education-block">
+        <h3><b>Marmara University</b></h3>
+        <span class="education-date">Sept 2020 - Not Graduated Yet</span>
+        
+        <h4>Bachelor of Science in Computer Science</h4>
+        <img src="images\marmara.png" width="130" height="130"alt="Resim">
 
-  const keys = Array.from(document.querySelectorAll('.key'));
-  keys.forEach(key => key.addEventListener('transitionend', removeTransition));
-  window.addEventListener('keydown', playSound);
-</script>
+        <p>
+          
+          Marmara University offers exceptional education in the field of
+          computer engineering, ensuring students receive a high-quality
+          learning experience. The department is equipped with knowledgeable
+          faculty members who are experts in their respective fields, providing
+          students with extensive theoretical knowledge and practical skills.
+          The curriculum is designed to cover a wide range of subjects,
+          including programming, algorithms, databases, computer networks,
+          artificial intelligence, and data science. Students are encouraged to
+          participate in hands-on projects, internships, and research
+          opportunities, allowing them to apply their knowledge in real-world
+          scenarios.
+        </p>
+      </div>
+      <!-- End .education-block -->
+    </div>
+    <!-- End #education -->
 
+    <div id="projects" class="background-alt">
+      <h2 class="heading"><b>Projects</b></h2>
+      <div class="container">
+        <div class="row">
+          <div class="project shadow-large">
+            <div class="project-image">
+              <img src="images/project.jpg" />
+            </div>
+            <!-- End .project-image -->
+            <div class="project-info">
+              <h3><b>UNBLOCKBALLGAME</b></h3>
+              <p>
+                Basic desktop game developed with Java and JavaFX. First Term
+                project homework.
+              </p>
+              <a
+                href="https://github.com/HasanPekedis/UNBLOCKBALLGAME"
+                target="_blank"
+                >View Project</a
+              >
+            </div>
+            <!-- End .project-info -->
+          </div>
+          <!-- End .project -->
 
-</body>
+          <div class="project shadow-large">
+            <div class="project-image">
+              <img src="images/project.jpg" />
+            </div>
+            <!-- End .project-image -->
+            <div class="project-info">
+              <h3><b>Basic Restaurnt Menu With QR Code</b></h3>
+              <p>
+                Basic restaurant menu site created with HTML and CSS. Project
+                created for practicing HTML and CSS skills. Project created for
+                mobile phones.
+              </p>
+              <a
+                href="https://github.com/HasanPekedis/Basic-Restaurant-Menu-with-qr"
+                target="_blank"
+                >View Project</a
+              >
+            </div>
+            <!-- End .project-info -->
+          </div>
+
+          <div class="project shadow-large">
+            <div class="project-image">
+              <img src="images/project.jpg" />
+            </div>
+            <!-- End .project-image -->
+            <div class="project-info">
+              <h3><b>Infinite Number Multiplier</b></h3>
+              <p>
+                C language project that multiply 2 theoretically infinite numbers.
+                Project using pointers for calculations. Also project compatible with
+                ANSI C.
+              </p>
+              <a
+                href="https://github.com/HasanPekedis/UNBLOCKBALLGAME"
+                target="_blank"
+                >View Project</a
+              >
+            </div>
+            <!-- End .project-info -->
+          </div>
+
+          <div class="project shadow-large">
+            <div class="project-image">
+              <img src="images/project.jpg" />
+            </div>
+            <!-- End .project-image -->
+            <div class="project-info">
+              <h3><b>Half Traveling Salesman</b></h3>
+              <p>
+                Modified Version of Traveling Salesman problem. Worked on 2-opt and other optimization algorithms.
+              </p>
+              <a
+                href="https://github.com/HasanPekedis/Half-TravelingSalesman"
+                target="_blank"
+                >View Project</a
+              >
+            </div>
+          <!-- End .project -->
+        </div>
+      </div>
+    </div>
+    <!-- End #projects -->
+
+    <div id="skills">
+      <h2 class="heading"><b>Technical Skills</b></h2>
+      <ul>
+        <li>Java</li>
+        <li>C</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>C++</li>
+        <li>GitBash</li>
+        <li>Git</li>
+        <li>MATLAB</li>
+        <li>HTML</li>
+        <li>CSS</li>
+      </ul>
+    </div>
+    <!-- End #skills -->
+
+    <div id="skills">
+        <h2 class="heading"><b>Soft Skills</b></h2>
+        <ul>
+          <li>Teamwork</li>
+          <li>Flexibility</li>
+          <li>Problem Solving</li>
+          <li>Communication</li>
+          <li>Leadership</li>
+          <li>Attention to Details</li>
+        </ul>
+      </div>
+
+      <div id="skills">
+        <h2 class="heading"><b>Relevant Courses</b></h2>
+        <ul>
+          <li>Computer Programming</li>
+          <li>Data Structures</li>
+          <li>Systems Programming</li>
+          <li>Analysis of Algorithms</li>
+          <li>Principles of Programming Languages</li>
+        </ul>
+      </div>
+
+      
+
+      
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-5 copyright">
+            <p>
+              Copyright &copy; <span id="current-year">2023</span> HASAN PEKEDİS
+            </p>
+          </div>
+          <div class="col-sm-2 top">
+            <span id="to-top">
+              <i class="fa fa-chevron-up" aria-hidden="true"></i>
+            </span>
+          </div>
+          <div class="col-sm-5 social">
+            <ul>
+
+              <li>
+                <p>hasanpekedis365@hotmail.com <br>
+                  <b>0 545 747 61 63</b>
+                </br></p>
+              </li>
+              <br>
+              <li>
+                <a href="https://github.com/HasanPekedis" target="_blank"
+                  ><i class="fa fa-github" aria-hidden="true"></i
+                ></a>
+              </li>
+
+              <li>
+                <a href="https://www.linkedin.com/in/hasanpekedis/" target="_blank"
+                  ><i class="fa fa-linkedin" aria-hidden="true"></i
+                ></a>
+              </li>
+              
+              
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+  </body>
 </html>
