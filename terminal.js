@@ -202,8 +202,10 @@
     for (const c of CHIPS) {
       const b = document.createElement('button');
       b.type = 'button';
-      b.textContent = c === 'lang' ? (lang === 'en' ? 'türkçe' : 'english') : c;
-      b.onclick = () => run(c === 'lang' ? `lang ${lang === 'en' ? 'tr' : 'en'}` : c);
+      const cmd = c === 'lang' ? `lang ${lang === 'en' ? 'tr' : 'en'}` : c;
+      b.textContent = cmd;
+      b.title = c === 'lang' ? (lang === 'en' ? 'Türkçe' : 'English') : '';
+      b.onclick = () => run(cmd);
       chips.appendChild(b);
     }
   };

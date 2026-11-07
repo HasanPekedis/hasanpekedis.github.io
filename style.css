@@ -109,14 +109,19 @@ a[target="_blank"]::after { content: " ↗"; font-size: .85em; }
 }
 .chips button {
   font: 12px var(--font);
-  color: var(--fg);
-  background: var(--chip);
+  color: var(--accent);
+  background: var(--win);
   border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: 4px 12px;
+  border-radius: 4px;
+  padding: 3px 8px;
   cursor: pointer;
+  transition: background .12s, border-color .12s;
 }
-.chips button:hover, .chips button:focus-visible { border-color: var(--accent); color: var(--accent); outline: none; }
+.chips button:hover, .chips button:focus-visible {
+  background: color-mix(in srgb, var(--accent) 18%, transparent);
+  border-color: var(--accent);
+  outline: none;
+}
 
 .koi { color: var(--warn); white-space: pre; overflow: hidden; }
 
