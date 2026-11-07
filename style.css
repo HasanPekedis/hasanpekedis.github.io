@@ -1,0 +1,136 @@
+:root {
+  --bg: #05070a;
+  --win: #0d1117;
+  --bar: #161b22;
+  --fg: #c9d1d9;
+  --dim: #7d8590;
+  --accent: #58a6ff;
+  --user: #3fb950;
+  --path: #d2a8ff;
+  --warn: #e3b341;
+  --err: #f85149;
+  --chip: #21262d;
+  --border: #30363d;
+  --font: "JetBrains Mono", ui-monospace, "Cascadia Code", Consolas, monospace;
+}
+body[data-theme="light"] {
+  --bg: #e9ecef; --win: #ffffff; --bar: #f0f2f4; --fg: #1f2328; --dim: #656d76;
+  --accent: #0969da; --user: #1a7f37; --path: #8250df; --warn: #9a6700; --err: #cf222e;
+  --chip: #eef1f4; --border: #d0d7de;
+}
+body[data-theme="matrix"] {
+  --bg: #000; --win: #020a02; --bar: #041204; --fg: #3cff7a; --dim: #1f9e48;
+  --accent: #9dffb8; --user: #3cff7a; --path: #9dffb8; --warn: #d6ff5c; --err: #ff5c5c;
+  --chip: #062006; --border: #0d3d14;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 14px/1.6 var(--font);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  transition: background .3s;
+}
+
+.window {
+  width: min(960px, 100%);
+  height: min(680px, calc(100vh - 48px));
+  background: var(--win);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, .45);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.titlebar {
+  height: 38px; flex: none;
+  display: flex; align-items: center; gap: 8px;
+  padding: 0 14px;
+  background: var(--bar);
+  border-bottom: 1px solid var(--border);
+}
+.dot { width: 12px; height: 12px; border-radius: 50%; }
+.red { background: #ff5f57; } .yellow { background: #febc2e; } .green { background: #28c840; }
+.title { flex: 1; text-align: center; color: var(--dim); font-size: 13px; margin-right: 52px; }
+
+.screen { flex: 1; overflow-y: auto; padding: 16px 18px 8px; cursor: text; }
+.screen::-webkit-scrollbar { width: 8px; }
+.screen::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+#output > div { white-space: pre-wrap; word-break: break-word; }
+.prompt-line { display: flex; gap: 8px; align-items: baseline; }
+.prompt { white-space: nowrap; }
+.user { color: var(--user); font-weight: 600; }
+.path { color: var(--path); }
+#cmd {
+  flex: 1; min-width: 0;
+  background: none; border: 0; outline: 0;
+  color: var(--fg); font: inherit; caret-color: var(--accent);
+}
+
+.echo { margin-top: 10px; }
+.dim { color: var(--dim); }
+.accent { color: var(--accent); }
+.warn { color: var(--warn); }
+.err { color: var(--err); }
+.ok { color: var(--user); }
+.b { font-weight: 600; }
+a, .cmdlink {
+  color: var(--accent);
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background .12s;
+}
+a:hover, a:focus-visible, .cmdlink:hover, .cmdlink:focus-visible {
+  background: color-mix(in srgb, var(--accent) 16%, transparent);
+  outline: none;
+}
+a[target="_blank"]::after { content: " ↗"; font-size: .85em; }
+.banner { color: var(--accent); line-height: 1.25; font-size: 12px; margin: 0 0 8px; }
+
+.grid { display: grid; grid-template-columns: max-content 1fr; column-gap: 20px; row-gap: 2px; }
+.cmdlink::before { content: "› "; opacity: .55; }
+.grid .cmdlink::before, .chips .cmdlink::before { content: none; }
+
+.chips {
+  flex: none;
+  display: flex; flex-wrap: wrap; gap: 8px;
+  padding: 10px 14px;
+  border-top: 1px solid var(--border);
+  background: var(--bar);
+}
+.chips button {
+  font: 12px var(--font);
+  color: var(--fg);
+  background: var(--chip);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 4px 12px;
+  cursor: pointer;
+}
+.chips button:hover, .chips button:focus-visible { border-color: var(--accent); color: var(--accent); outline: none; }
+
+.koi { color: var(--warn); white-space: pre; overflow: hidden; }
+
+.noscript { max-width: 640px; padding: 24px; }
+
+@media (max-width: 640px) {
+  body { padding: 0; align-items: stretch; }
+  .window { height: 100vh; height: 100dvh; border-radius: 0; border: 0; }
+  body { font-size: 13px; }
+  .banner { font-size: 7px; }
+  .grid { grid-template-columns: 1fr; }
+  .grid > .key { margin-top: 6px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}

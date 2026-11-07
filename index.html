@@ -1,285 +1,44 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
-
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hasan Pekedis</title>
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet" />
-  <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css" />
-  <link href="css/bootstrap.min.css" rel="stylesheet" />
-  <link href="css/styles.css" rel="stylesheet" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hasan Pekedis — AI/ML Engineer</title>
+<meta name="description" content="Hasan Pekedis — AI/ML Engineer in İstanbul building LLM applications, RAG, NER and agent tooling.">
+<meta property="og:title" content="Hasan Pekedis — AI/ML Engineer">
+<meta property="og:description" content="LLM applications, RAG, NER and agent tooling. Type `help` to explore.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hasanpekedis.github.io/">
+<meta name="theme-color" content="#0d1117">
+<link rel="icon" href="favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-
-<body>
-  <div id="mobile-menu-open" class="shadow-large">
-    <i class="fa fa-bars" aria-hidden="true"></i>
+<body data-theme="dark">
+<main class="window" aria-label="Interactive terminal">
+  <div class="titlebar">
+    <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+    <span class="title">hasan@pekedis: ~</span>
   </div>
-  <!-- End #mobile-menu-toggle -->
-  <header>
-    <div id="mobile-menu-close">
-      <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
-    </div>
-    <ul id="menu" class="shadow">
-      <li>
-        <a href="#about">About</a>
-      </li>
-      <li>
-        <a href="#education">Education</a>
-      </li>
-      <li>
-        <a href="#projects">Projects</a>
-      </li>
-      <li>
-        <a href="#skills">Skills</a>
-      </li>
-
-
-    </ul>
-  </header>
-  <!-- End header -->
-  
-  <div id="lead">
-    <div id="lead-content">
-      
-
-      <h1>Hasan Pekedis</h1>
-      <h2>Marmara University <br />Computer Engineering</h2>
-
-      <a href="cv\Hasan's ResumeEnglish.pdf" class="btn-rounded-white" download="Hasan's ResumeEnglish">Download
-        Resume(English)</a>
-      <a href="cv\Hasan's ResumeTurkce1.pdf" class="btn-rounded-white" download="Hasan's ResumeTurkce1">Download
-        Resume(Turkish)</a>
-        <br> <br>
-        <a href="indexturkish.html" class="btn-rounded-white" >For Turkish Website</a>
-  
-
-
-    </div>
-    <!-- End #lead-content -->
-
-    <div id="lead-overlay"></div>
-
-    <div id="lead-down">
-      <span>
-        <i class="fa fa-chevron-down" aria-hidden="true"></i>
-      </span>
-    </div>
-    <!-- End #lead-down -->
+  <div class="screen" id="screen">
+    <div id="output" role="log" aria-live="polite"></div>
+    <form class="prompt-line" id="form" autocomplete="off">
+      <label for="cmd" class="prompt"><span class="user">hasan@pekedis</span>:<span class="path">~</span>$</label>
+      <input id="cmd" name="cmd" type="text" spellcheck="false" autocapitalize="off" autocorrect="off" aria-label="Type a command">
+    </form>
   </div>
-  <!-- End #lead -->
+  <nav class="chips" id="chips" aria-label="Quick commands"></nav>
+</main>
 
-  <div id="about">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <h2 class="heading"><b>About Me</b></h2>
-        </div>
-        <div class="col-md-8">
-          <p>
-                        I am a 22-year-old fourth-year Computer Engineering student. I am interested in <b>Java Programming</b>, <b>Machine
-            Learning </b>, and <b>NLP</b>. I have experience in <b>software development</b>, <b>database design</b>, and <b>software design</b>. I closely
-            follow current technology. I am a motivated individual who enjoys learning and researching new topics. I
-            am developing myself to become an engineer who strives to develop innovative solutions to problems. I am a
-            team player who collaborates to achieve success. I have intermediate-level knowledge of computer hardware.
-          </p>
-        </div>
-      </div>
-    </div>
+<noscript>
+  <div class="noscript">
+    <h1>Hasan Pekedis</h1>
+    <p>AI/ML Engineer at DNA Proje ve Yazılım A.Ş., İstanbul. I build LLM applications, retrieval-augmented generation (RAG), named-entity recognition and agent tooling.</p>
+    <p><a href="https://github.com/HasanPekedis">GitHub</a> · <a href="https://www.linkedin.com/in/hasanpekedis/">LinkedIn</a> · <a href="mailto:hasanpekedis365@hotmail.com">Email</a> · <a href="cv/hasan-pekedis-cv-en.pdf">CV</a></p>
   </div>
-  <!-- End #about -->
-
-  <div id="education">
-    <h2 class="heading"><b>Education</b></h2>
-    <div class="education-block">
-      <h3><b>Marmara University</b></h3>
-      <span class="education-date">Sept 2020 - Not Graduated Yet</span>
-
-      <h4>Bachelor of Science in Computer Science</h4>
-      <img src="images\marmara.png" width="130" height="130" alt="Resim">
-
-      <p>
-
-        Marmara University offers exceptional education in the field of
-        computer engineering, ensuring students receive a high-quality
-        learning experience. The department is equipped with knowledgeable
-        faculty members who are experts in their respective fields, providing
-        students with extensive theoretical knowledge and practical skills.
-        The curriculum is designed to cover a wide range of subjects,
-        including programming, algorithms, databases, computer networks,
-        artificial intelligence, and data science. Students are encouraged to
-        participate in hands-on projects, internships, and research
-        opportunities, allowing them to apply their knowledge in real-world
-        scenarios.
-      </p>
-    </div>
-    <!-- End .education-block -->
-  </div>
-  <!-- End #education -->
-
-  <div id="projects" class="background-alt">
-    <h2 class="heading"><b>Projects</b></h2>
-    <div class="container">
-      <div class="row">
-        <div class="project shadow-large">
-          <div class="project-image">
-            <img src="images/project.jpg" />
-          </div>
-          <!-- End .project-image -->
-          <div class="project-info">
-            <h3><b>Turkish NLP</b></h3>
-            <p>
-              Turkish NLP aims to improve the performance of open-source large language models in Turkish NLP
-tasks (such as summarization and language generation). Since most open-source language models are
-trained on English-dominated datasets, this project experiments with different methods and techniques
-to enhance their performance in Turkish.
-            </p>
-            <a href="https://github.com/yigittuncer07/turkish_nlp" target="_blank">View Project</a>
-          </div>
-          <!-- End .project-info -->
-        </div>
-        <!-- End .project -->
-
-        <div class="project shadow-large">
-          <div class="project-image">
-            <img src="images/project.jpg" />
-          </div>
-          <!-- End .project-image -->
-          <div class="project-info">
-            <h3><b>Prompt4README</b></h3>
-            <p>
-              Script focuses on developing a system to generate high-quality prompts for creating README files of existing software projects.
-
-            </p>
-            <a href="https://github.com/HasanPekedis/Prompt4README" target="_blank">View Project</a>
-          </div>
-          <!-- End .project-info -->
-        </div>
-
-        <div class="project shadow-large">
-          <div class="project-image">
-            <img src="images/project.jpg" />
-          </div>
-          <!-- End .project-image -->
-          <div class="project-info">
-            <h3><b>Othello AI</b></h3>
-            <p>
-              The Othello Game Project is a Python-based implementation of the classic board game Othello (also known as Reversi). The project allows users to play the game in various modes, including Human vs Human, Human vs AI, and AI vs AI. The AI players utilize different heuristics and search depths to make strategic moves, providing a challenging experience for human players.
-            </p>
-            <a href="https://github.com/HasanPekedis/othello" target="_blank">View Project</a>
-          </div>
-          <!-- End .project-info -->
-        </div>
-
-        <div class="project shadow-large">
-          <div class="project-image">
-            <img src="images/project.jpg" />
-          </div>
-          <!-- End .project-image -->
-          <div class="project-info">
-            <h3><b>University Registration System</b></h3>
-            <p>
-              Worked in a 7-person team in an Agile Scrum environment using Java and Python for a university system project. Wrote unit tests and managed tasks on GitHub over three iterations.
-            </p>
-            <a href="https://github.com/yigittuncer07/uni_registration_system" target="_blank">View Project</a>
-          </div>
-          <!-- End .project -->
-        </div>
-      </div>
-    </div>
-    <!-- End #projects -->
-
-    <div id="skills">
-      <h2 class="heading"><b>Technical Skills</b></h2>
-      <ul>
-        <li>Java</li>
-        <li>C</li>
-        <li>JavaScript</li>
-        <li>Python</li>
-        <li>C++</li>
-        <li>GitBash</li>
-        <li>Git</li>
-        <li>MATLAB</li>
-        <li>HTML</li>
-        <li>CSS</li>
-      </ul>
-    </div>
-    <!-- End #skills -->
-
-    <div id="skills">
-      <h2 class="heading"><b>Soft Skills</b></h2>
-      <ul>
-        <li>Teamwork</li>
-        <li>Flexibility</li>
-        <li>Problem Solving</li>
-        <li>Communication</li>
-        <li>Leadership</li>
-        <li>Attention to Details</li>
-      </ul>
-    </div>
-
-    <div id="skills">
-      <h2 class="heading"><b>Relevant Courses</b></h2>
-      <ul>
-        <li>Computer Programming</li>
-        <li>Data Structures</li>
-        <li>Systems Programming</li>
-        <li>Analysis of Algorithms</li>
-        <li>Principles of Programming Languages</li>
-      </ul>
-    </div>
-
-
-
-
-
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-5 copyright">
-            <p>
-              Copyright &copy; <span id="current-year">2023</span> HASAN PEKEDİS
-            </p>
-          </div>
-          <div class="col-sm-2 top">
-            <span id="to-top">
-              <i class="fa fa-chevron-up" aria-hidden="true"></i>
-            </span>
-          </div>
-          <div class="col-sm-5 social">
-            <ul>
-
-              <li>
-                <p>hasanpekedis365@hotmail.com <br>
-                  <b>0 545 747 61 63</b>
-                  </br>
-                </p>
-              </li>
-              <br>
-              <li>
-                <a href="https://github.com/HasanPekedis" target="_blank"><i class="fa fa-github"
-                    aria-hidden="true"></i></a>
-              </li>
-
-              <li>
-                <a href="https://www.linkedin.com/in/hasanpekedis/" target="_blank"><i class="fa fa-linkedin"
-                    aria-hidden="true"></i></a>
-              </li>
-
-
-
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- End footer -->
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/scripts.min.js"></script>
+</noscript>
+<script src="terminal.js"></script>
 </body>
-
 </html>
